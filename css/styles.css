@@ -1133,3 +1133,11 @@ th:last-child {
     width: 45%;
   }
 }
+
+.register-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 10px;
+}
