@@ -1,107 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
-    <script type="module" src="/js/register.js" defer></script>
 
-    <title>Criar Conta</title>
-  </head>
-  <body>
-    <form class="form__sign-up">
-      <h1 class="form_title">Sunshine</h1>
-      <h2 class="form__title">Criar conta</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script type="module" src="/js/register.js" defer></script>
 
-      <fieldset class="form__field">
-        <legend class="field__legend">Dados pessoais</legend>
+  <title>Criar Conta</title>
+</head>
 
-        <div class="input__block">
-          <div class="input__field">
-            <input class="input" type="text" id="name" name="name" required />
-            <label class="input__label">Nome</label>
-            <span class="input__error"></span>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="navigation container">
+      <div class="logo">
+        <h1>Sunshine</h1>
+      </div>
+
+      <div class="menu">
+        <div class="top-nav">
+          <div class="logo">
+            <h1>Sunshine</h1>
           </div>
-          <div class="input__field">
-            <input
-              class="input"
-              type="text"
-              id="last-name"
-              name="last-name"
-              required
-            />
-            <label class="input__label">Sobrenome</label>
-            <span class="input__error"></span>
+          <div class="close">
+            <i class="bx bx-x"></i>
           </div>
         </div>
 
-        <div class="select__field">
-          <select class="select" name="gender" id="gender">
-            <option label="Sexo" hidden selected></option>
-            <option value="M">Homem</option>
-            <option value="F">Mulher</option>
-          </select>
-          <span class="input__error"></span>
-        </div>
-        <div class="date__field">
-          <label for="birth">Data de nascimento:</label>
-          <input
-            class="input"
-            type="date"
-            id="birth"
-            name="birth"
-            min="1950-01-01"
-            required
-          />
-          <span class="input__error"></span>
-        </div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="product.html" class="nav-link">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Conta</a>
+          </li>
+          <li class="nav-item">
+            <a href="cart.html" class="nav-link icon"><i class="bx bx-shopping-bag"></i></a>
+          </li>
+        </ul>
+      </div>
 
-        <div class="input__block">
-          <div class="input__field">
-            <input class="input" type="text" id="cpf" name="cpf" placeholder="ex.: 000.000.000-00"/>
-            <label class="input__label">CPF</label>
-            <span class="input__error"></span>
-          </div>
-          <div class="input__field">
-            <input class="input" type="text" id="phone" name="phone" placeholder="ex.: 01 91234-5678">
-            <label class="input__label">Celular</label>
-            <span class="input__error"></span>
-          </div>
-        </div>
-      </fieldset>
+      <a href="cart.html" class="cart-icon">
+        <i class="bx bx-shopping-bag"></i>
+      </a>
 
-      <fieldset class="form__field">
-        <legend class="field__legend">E-mail e Senha</legend>
+      <div class="hamburger">
+        <i class="bx bx-menu"></i>
+      </div>
+    </div>
+  </nav>
+
+  <form class="form__sign-up">
+    <h2 class="form__title">Criar conta</h2>
+    
+    <fieldset class="form__field">
+      <legend class="field__legend">Dados pessoais</legend>
+
+      <div class="input__block">
         <div class="input__field">
-          <input class="input" type="email" id="email" name="email" required />
-          <label class="input__label">E-mail</label>
-          <span class="input__error"></span>
+          <input class="input" type="text" id="name" name="name" required />
+          <label class="input__label">Nome</label>
         </div>
         <div class="input__field">
-          <input
-            class="input"
-            type="password"
-            id="password"
-            name="password"
-            required
-          />
-          <label class="input__label">Senha</label>
-          <span class="input__error"></span>
+          <input class="input" type="text" 
+            id="last-name" name="last-name" required />
+          <label class="input__label">Sobrenome</label>
+        </div>
+      </div>
+
+      <div class="select__field">
+        <select class="select" name="gender" id="gender">
+          <option label="Sexo" hidden selected></option>
+          <option value="M">Homem</option>
+          <option value="F">Mulher</option>
+        </select>
+       
+      </div>
+      <div class="date__field">
+        <label for="birth">Data de nascimento:</label>
+        <input class="input" type="date" id="birth" name="birth" min="1950-01-01" required />
+      </div>
+
+      <div class="input__block">
+        <div class="input__field">
+          <input class="input" type="text" id="cpf" name="cpf" placeholder="ex.: 000.000.000-00" />
+          <label class="input__label">CPF</label>
         </div>
         <div class="input__field">
-          <input
-            class="input"
-            type="password"
-            id="confirm"
-            name="confirm-password"
-            required
-          />
-          <label class="input__label">Confirmar senha</label>
-          <span class="input__error"></span>
+          <input class="input" type="text" id="phone" name="phone" placeholder="ex.: 01 91234-5678">
+          <label class="input__label">Celular</label>
+      
         </div>
-      </fieldset>
+      </div>
+    </fieldset>
 
-      <button class="form__submit" type="submit">Criar</button>
-    </form>
-  </body>
+    <fieldset class="form__field">
+      <legend class="field__legend">E-mail e Senha</legend>
+      <div class="input__field">
+        <input class="input" type="email" id="email" name="email" autocomplete="off" required />
+        <label class="input__label">E-mail</label>
+
+      </div>
+      <div class="input__field">
+        <input class="input" type="password" id="password" name="password" required />
+        <label class="input__label">Senha</label>
+       
+      </div>
+      <div class="input__field">
+        <input class="input" type="password" id="confirm" name="confirm-password" required />
+        <label class="input__label">Confirmar senha</label>
+       
+      </div>
+    </fieldset>
+
+    <button class="form__submit" type="submit">Criar</button>
+  </form>
+</body>
+
 </html>
